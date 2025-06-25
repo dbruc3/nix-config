@@ -84,9 +84,9 @@
       SSH_AUTH_SOCK = "`gpgconf --list-dirs agent-ssh-socket`";
     };
     shellAliases = {
-      hm = "vim ~/.config/home-manager/$(uname).nix";
-      hmc = "vim ~/.config/home-manager/common.nix";
-      hms = "nix-shell -p home-manager --run 'home-manager -f ~/nix-config/home-manager/$(uname).nix switch'";
+      hm = "vim ~/nix-config/$(uname).nix";
+      hmc = "vim ~/nix-config/common.nix";
+      hms = "nix-shell -p home-manager --run 'home-manager -f ~/nix-config/$(uname).nix switch'";
       g = "mods -m gpt-4o -a openai";
       ls = "ls --color=auto";
       sc = "sc-im";
@@ -220,7 +220,7 @@
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
-    pinentryPackage = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-curses;
     enableScDaemon = true;
   };
 }
