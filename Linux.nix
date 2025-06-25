@@ -98,7 +98,7 @@
   programs.gnome-terminal = {
     enable = true;
     showMenubar = false;
-    profile.default = {
+    profile.ccf40f11-c264-499d-8c9c-4a058e43001f = {
       default = true;
       visibleName = "defaultConfig";
       showScrollbar = false;
